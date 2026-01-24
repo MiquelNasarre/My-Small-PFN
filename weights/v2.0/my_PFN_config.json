@@ -1,0 +1,1 @@
+{"requires_grad": true, "embedded_dimension": 96, "n_layers": 18, "n_heads": 3, "hidden_dimension_ff": 512, "hidden_dimension_enc": 512, "hidden_dimension_dec": 512, "feature_group_size": 3, "n_thinking_rows": 32, "n_buckets": 256, "temperature": 1.0, "device": "cuda"}
