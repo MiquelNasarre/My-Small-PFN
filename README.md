@@ -269,6 +269,22 @@ predicting on larger datasets than the ones it was trained on. Despite its clear
 proof-of-concept, it shows the potential of PFNs and their versatility. I hope this inspires other people to create 
 their own PFNs and experiment with different kinds of data.
 
+### Interpretability
+
+Given the nature of PFNs, they are particularly well suited for data interpretability. Techniques that would 
+normally require retraining a model under different data or feature configurations can instead be reduced to 
+simple forward passes. Given these characteristics, this project implements several interpretability methods, 
+which can be found in `scripts/my_interpretability.py`. These are separated in three classes: `FeatureEffects`, 
+`FeatureImportance` and `DataValuation`.
+
+Tests of these methods on synthetic data are available in `notebooks/interpretability_tests.ipynb`. All functions 
+are validated against expected outputs. You can modify the definition of `transf()` to experiment with different 
+data transformations and verify the behavior of the interpretability routines.
+
+Additionally, `notebooks/real_data_interpretability.ipynb` provides illustrative examples demonstrating how these 
+methods can be used to improve model performance and to better understand feature behavior on real datasets. Feel 
+free to conduct further experiments with the functions provided.
+
 ### Other Tests
 
 The `v1.0` model has been tested on preprocessed market data, since it was trained on a heavier noise regime, the 
@@ -301,6 +317,7 @@ For the creation of this project the following ones have been read:
 - [2022 — Transformers Can Do Bayesian Inference](https://arxiv.org/abs/2112.10510) (PFN discovery)
 - [2023 — TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second](https://arxiv.org/abs/2207.01848) (TabPFN v1)
 - [2023 — Statistical Foundations of Prior-Data Fitted Networks](https://proceedings.mlr.press/v202/nagler23a) (Theory foundation of PFNs)
+- [2024 — Interpretable Machine Learning for TabPFN](https://arxiv.org/abs/2403.10923v1) (Interpretability paper)
 - [2025 — From Tables to Time: How TabPFN-v2 Outperforms Specialized Time Series Forecasting Models](https://arxiv.org/abs/2501.02945) (Expansion of PFNs to Time Series)
 - [2025 — Accurate predictions on small data with a tabular foundation model](https://www.nature.com/articles/s41586-024-08328-6) (Nature paper on TabPFN-2.5)
 - [2025 — TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models](https://arxiv.org/abs/2511.08667) (TabPFN-2.5 Technical Report)
